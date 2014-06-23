@@ -7,7 +7,7 @@ paperNotes.bib
 *.aux
 *.log
 *.toc
-*.bbl
+/*.bbl
 *.blg
 *.swp
 *.pyc
