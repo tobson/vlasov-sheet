@@ -1,0 +1,60 @@
+\tdplotsetmaincoords{70}{110}
+
+\begin{tikzpicture}[scale=5,tdplot_main_coords]
+
+\coordinate (O) at (0,0,0);
+
+% Draw the main coordinate system axes
+\draw[thick,->] (0,0,0) -- (1,0,0) node[anchor=north east]{$x$};
+\draw[thick,->] (0,0,0) -- (0,1,0) node[anchor=north west]{$y$};
+\draw[thick,->] (0,0,0) -- (0,0,1) node[anchor=south]{$z$};
+
+% Angle between gyro-frequency vector and z-axis
+\pgfmathsetmacro{\myphi}{20}
+% Length of wave vector
+\pgfmathsetmacro{\klen}{0.8}
+% Angle between wave vector and z-axis
+\pgfmathsetmacro{\kinc}{30}
+
+\pgfmathsetmacro{\kz}{cos(\kinc)*\klen}
+\pgfmathsetmacro{\kx}{sin(\kinc)*\klen}
+
+\pgfmathsetmacro{\myalpha}{-atan(\kz*sin(\myphi)/\kx)}
+
+\tdplotsetcoord{K}{\klen}{\kinc}{0}
+\draw[black,dashed] (K) -- (Kyz);
+\draw[black,dashed] (K) -- (Kxy);
+
+\tdplotsetthetaplanecoords{90}
+\tdplotdrawarc[tdplot_rotated_coords]{(0,0,0)}{0.8}{0}{\myphi}{anchor=north}{$\varphi$}
+
+\tdplotsetcoord{G}{1}{\myphi}{90}
+\draw[black,dashed] (G) -- (Gxz);
+\draw[black,dashed] (G) -- (Gxy);
+
+% Define rotated coordinate system
+\tdplotsetrotatedcoords{90}{\myphi}{\myalpha-90}
+\tdplotdrawarc[tdplot_rotated_coords]{(0,0,0)}{0.8}{0}{-\myalpha}{anchor=south
+west}{$\alpha$}
+
+\tdplottransformmainrot{\kx}{0}{\kz}
+
+% Draw the rotated coordinate system axes
+\draw[thick,->,tdplot_rotated_coords] (0,0,0) -- (1,0,0)
+node[anchor=north west,black]{$1$};
+\draw[thick,->,tdplot_rotated_coords] (0,0,0) -- (0,1,0)
+node[anchor=west,black]{$2$};
+\draw[thick,->,tdplot_rotated_coords] (0,0,0) -- (0,0,1)
+node[anchor=south,black]{$\bm{\omega}_g$};
+
+\draw[tdplot_rotated_coords,dashed]
+(\tdplotresx,0,\tdplotresz) -- (\tdplotresx,0,0);
+\draw[tdplot_rotated_coords,dashed]
+(\tdplotresx,0,\tdplotresz) -- (0,0,\tdplotresz);
+
+\draw[-stealth,thick] (O) -- (\kx,0,\kz)
+node[anchor=south east,black]{$\bm{k}$};
+
+%\node at (0.5,0.25,-0.3){$k_x\tan\alpha=k_z\sin\varphi$};
+
+\end{tikzpicture}

@@ -1,0 +1,6 @@
+build
+DSolveGC.cpp
+DSolveParallel.cpp
+findmax.c
+*.so
+*.html

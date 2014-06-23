@@ -1,0 +1,79 @@
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{mathtools}
+\usepackage[utf8]{inputenc}
+\usepackage[pdftex]{graphicx}
+
+\usepackage{cleveref}
+\crefname{appsec}{Appendix}{Appendices}
+
+\usepackage{bm}
+\let\vec\bm
+\newcommand{\tvec}[1]{\tilde{\vec{#1}}}
+
+\usepackage{mleftright}
+\let\left\mleft
+\let\right\mright
+
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usetikzlibrary{calc}
+
+% Derivatives
+\newcommand{\pder}[2]{\frac{\partial#1}{\partial#2}}
+\newcommand{\pdder}[2]{\frac{\partial^2#1}{\partial#2^2}}
+\newcommand{\der}[2]{\frac{d#1}{d#2}}
+
+% Sum over species
+\newcommand{\sums}{\sum_s}
+
+% Alfven speed
+\newcommand{\va}{v_a}
+% Thermal velocity
+\newcommand{\vt}{v_t}
+\newcommand{\vts}{v_{ts}}
+% Electron pressure
+\newcommand{\pe}{p_e}
+% Electron bulk velocity
+\newcommand{\ue}{\vec{u}_e}
+\newcommand{\tue}{\tvec{u}_e}
+
+% Plasma frequency
+\newcommand{\omp}{\omega_p}
+\newcommand{\omps}{\omega_{ps}}
+
+% Cyclotron frequency
+\newcommand{\omc}{\omega_c}
+\newcommand{\omcs}{\omega_{cs}}
+\newcommand{\vomc}{\vec{\omega}_c}
+\newcommand{\vomcs}{\vec{\omega}_{cs}}
+\newcommand{\ome}{\bar{\omega}_c}
+
+% Gyration frequency
+\newcommand{\omg}{\omega_g}
+\newcommand{\omgs}{\omega_{gs}}
+\newcommand{\vomg}{\vec{\omega}_g}
+\newcommand{\vomgs}{\vec{\omega}_{gs}}
+
+% Unit vectors
+\newcommand{\ex}{\vec{e}_x}
+\newcommand{\ey}{\vec{e}_y}
+\newcommand{\ez}{\vec{e}_z}
+
+% Circular velocity
+\newcommand{\vc}{\mathring{v}}
+\newcommand{\vvc}{\vec{\mathring{v}}}
+
+% Charge to mass ratio
+\newcommand{\cm}{\frac{e}{m}}
+
+% Vertical frequency
+\newcommand{\vfreq}{\nu}
+
+% Species charge
+\newcommand{\qs}{e_s}
+
+% Gyrocentric radius
+\newcommand{\rc}{r_c}
