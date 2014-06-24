@@ -55,7 +55,8 @@ def compute ():
             ind = ioc + ibeta
             kz_opt[ind], gamma_max[ind] = findmax (kz, gamma)
 
-        percentage = pbar.maxval*ioc[1]/(noc - 1)
+        count = ioc[0]*oc.shape[1] + ioc[1]
+        percentage = pbar.maxval*(count + 1)/oc.size
         pbar.update (percentage)
 
     return oc, beta, kz_opt, gamma_max
