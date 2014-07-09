@@ -12,7 +12,7 @@ cdef extern from "Faddeeva.hh" namespace "Faddeeva":
 import numpy as np
 from numpy cimport ndarray
 
-cdef class Newton:
+cdef class DSolveGC:
 
     cdef double beta, psi, va, Omega, qshear, tol
     cdef int maxiter
