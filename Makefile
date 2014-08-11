@@ -10,3 +10,4 @@ figures: $(addprefix figures/, $(addsuffix .pdf, $(figures)))
 clean:
 	latexmk -C paper
 	cd python; make clean
+	rm -f figures/*
