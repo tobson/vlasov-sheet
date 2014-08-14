@@ -1,5 +1,5 @@
 \RequirePackage[l2tabu, orthodox]{nag}
-\documentclass[aps,pre,notitlepage,amsmath,amssymb,amsfonts,nobibnotes,nofootinbib]{revtex4-1}
+\documentclass[aps,pre,notitlepage,amsmath,amssymb,amsfonts,nobibnotes,nofootinbib,superscriptaddress]{revtex4-1}
 \setcitestyle{authoryear,round}
 \bibliographystyle{apsrev4-1}
 
@@ -22,10 +22,15 @@
   with Application to the Magneto-Rotational Instability}
 
 \author{Tobias Heinemann}
-\affiliation{University of California at Berkeley}
-\affiliation{Kavli Institute for Theoretical Physics}
+\email{tobias.heinemann@gmail.com}
+\affiliation{Department of Astronomy,
+  University of California, Berkeley, CA 94720, USA}
+\affiliation{Kavli Institute for Theoretical Physics,
+  University of California, Santa Barbara, CA 93106, USA}
 \author{Eliot Quataert}
-\affiliation{University of California at Berkeley}
+\email{eliot@berkeley.edu}
+\affiliation{Department of Astronomy,
+  University of California, Berkeley, CA 94720, USA}
 
 \date{\today}
 
@@ -108,7 +113,8 @@ an appropriate set of coordinate transformations.
 numerically the MRI dispersion relation in various limits and discuss the
 connection between our results and previous derivations in the literature.
 Finally, \cref{sec:conclusions} summarizes our key results. The Appendices
-contain various technical aspects of the calculations. 
+\labelcref{app:unperturbed-hamiltonian} through \labelcref{app:vlasov-fluid}
+contain various technical aspects of the calculations.
 
 \section{Vlasov description of charged particle dynamics in the shearing
 sheet}
@@ -1864,8 +1870,9 @@ The integrals of motion are the particle energy
   + \Psi + \cm\Phi
 \end{equation}
 and the canonical angular momentum $p_\varphi$ defined in
-\cref{eq:canonical-angular-momentum}. Let us define the guiding center radius
-$\rc$ through
+\cref{eq:canonical-angular-momentum}.  By Jeans' theorem, any distribution
+function of the form $f(\mathcal{E},p_\varphi)$ is a solution of the steady
+state Vlasov equation. Let us define the guiding center radius $\rc$ through
 \begin{equation}
   p_\varphi = \rc^2\Omega(\rc,0) - \cm\psi(\rc,0).
 \end{equation}
@@ -1877,9 +1884,8 @@ Its energy is
 \end{equation}
 
 Note that $\mathcal{E}_c$ depends only on the angular momentum and is thus an
-integral of motion. By Jeans' theorem, any distribution function of the form
-$f(\mathcal{E},\mathcal{E})$ is thus a solution to the steady state Vlasov
-equation. We define the modified electromagnetic Schwarzschild distribution as
+integral of motion. We define the modified electromagnetic Schwarzschild
+distribution as
 \begin{equation}
   \label{eq:modified-em-schwarzschild}
   f \propto \exp(-\mathcal{K}/T),
@@ -1970,9 +1976,9 @@ species yields the perturbed current density
   \label{eq:conductive-relation-tilde}
   \delta\vec{J} = \tvec{\sigma}
   \cdot\left(\mathbf{1} - \frac{q\Omega}{i\omega}\ex\ey\right)
-  \cdot\delta\tvec{E},
+  \cdot\delta\tvec{E}.
 \end{equation}
-where we have introduced the tensor
+Here, we have introduced the tensor
 \begin{equation}
   \label{eq:sigma-tilde}
   \tvec{\sigma}
@@ -1981,7 +1987,7 @@ where we have introduced the tensor
   \cdot[i(\omega - \vec{k}\cdot\tvec{v}')\mathbf{1} + i\vec{k}\tvec{v}'
   + q\Omega\ex\ey]\exp\{-i\phi(\tau)\},
 \end{equation}
-where we have introduced a new time variable $\tau=t-t'$ and the short hand
+where the new time variable $\tau=t-t'$ and the short hand
 \begin{equation}
   \phi(\tau) = \vec{k}\cdot(\vec{r} - \vec{r}') - \omega\tau.
 \end{equation}
@@ -2071,12 +2077,12 @@ The electrons dynamics are described by the momentum equation
   \label{eq:ohms-law}
   e n_e(\vec{E} + \ue\times\vec{B}) + \nabla\pe = 0,
 \end{equation}
-which we will henceforth refer to as the generalized Ohm's law. Throughout
-this work we assume that the electron pressure $\pe$ is a function of the
-electron number density $n_e$ alone, i.e.\ we assume a barotropic equation of
-state. \Cref{eq:ohms-law} arises out of the electron momentum equation in the
-limit of vanishing electron mass and assuming an isotropic pressure. The
-electrons must be collisional for this assumption to be reasonable. Indeed,
+which we will henceforth refer to as the generalized Ohm's law. Here, we
+assume that the electron pressure $\pe$ is a function of the electron number
+density $n_e$ alone, i.e.\ we assume a barotropic equation of state.
+\Cref{eq:ohms-law} arises out of the electron momentum equation in the limit
+of vanishing electron mass and assuming an isotropic pressure. The electrons
+must be collisional for this assumption to be reasonable. Indeed,
 \citet{Rosin2011} derive \cref{eq:ohms-law} rigorously through an expansion in
 the electron-to-ion mass ratio under the assumption of weakly collisional ions
 but strongly collisional electrons.
