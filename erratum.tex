@@ -1,0 +1,50 @@
+\documentclass[aps,pre,notitlepage,amsmath,amssymb,amsfonts,nobibnotes,nofootinbib,superscriptaddress]{revtex4-1}
+
+\input{preamble}
+
+\begin{document}
+
+\title{Erratum: ``Linear Vlasov Theory in the Shearing Sheet Approximation \\
+  with Application to the Magneto-Rotational Instability'' (2014, 792, 1, 70)}
+
+\author{Tobias Heinemann}
+\email{tobias.heinemann@gmail.com}
+\affiliation{Department of Astronomy,
+  University of California, Berkeley, CA 94720, USA}
+\affiliation{Kavli Institute for Theoretical Physics,
+  University of California, Santa Barbara, CA 93106, USA}
+\author{Eliot Quataert}
+\email{eliot@berkeley.edu}
+\affiliation{Department of Astronomy,
+  University of California, Berkeley, CA 94720, USA}
+
+\date{January 2, 2015}
+
+\maketitle
+
+The parallel component of the ion response tensor for ``parallel modes''
+($\vec{k}\parallel\vec{B}\parallel\vec{\Omega}$) given in eq.~(71) of the
+original paper is incorrect. In accordance with eq.~(49), this equation should
+instead read
+\begin{equation}
+  \mathbf{\Lambda} =
+  \frac{1}{2}\sum_\pm\Lambda^{}_\pm
+  (\vec{e}_1\pm i\vec{e}_2)(\vec{e}_1\mp i\vec{e}_2)
+  - \frac{\omega^2}{k_z^2 v_t^2} W\left(\frac{\omega}{|k_z|v_t}\right)
+  \vec{e}_3\vec{e}_3.
+\end{equation}
+This error is inconsequential for the remainder of the paper because the
+dispersion relation for parallel modes factorizes into parallel and
+perpendicular branches and following eq.~(71) we only consider the
+perpendicular branch.
+
+In section~3 of the original paper we state that the labels $\perp$ and
+$\parallel$ always refer to the direction of the gyro-frequency vector
+$\vec{\omega}_g$ defined in eq.~(19) throughout the paper. This is in fact
+only true for sections~3 and~4. In section~5, the same labels $\perp$ and
+$\parallel$ instead refer to the direction of the background magnetic field
+$\vec{B}$. We note, however, that the two directions are the same in the
+guiding center limit considered in section~5.2 and (by definition) in the case
+of parallel modes considered in section~5.3.
+
+\end{document}
