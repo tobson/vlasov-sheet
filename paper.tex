@@ -139,14 +139,14 @@ are given by
 \end{equation}
 where $\hat{f}_s=f_s/n_s$ is the reduced distribution function.
 
-The tidal potential $\psi$ is the sum of the centrifugal and the gravitational
-potential. In the shearing sheet approximation \citep{Goldreich1965}, this is
-given by
+The tidal potential $\psi$ is the sum of the centrifugal potential and the
+gravitational potential. In the shearing sheet approximation
+\citep{Goldreich1965}, this is given by
 \begin{equation}
   \label{eq:tidal-potential}
   \psi = -q\Omega^2 x^2 + \frac{1}{2}\vfreq^2 z^2.
 \end{equation}
-The angular velocity $\Omega$ is determined from the radial force balance. We
+The angular velocity $\Omega$ is determined from radial force balance. We
 assume that in equilibrium, the magnetic field is frozen into a bulk flow
 $\vec{u}$ common to all species ($\vec{E}+\vec{u}\times\vec{B}=0$). If the
 gravitational potential is due to a point mass and radial pressure support is
@@ -240,9 +240,9 @@ is thus given by the conjugate momentum $p_y$. We will henceforth refer to
 $p_y=v_y+S_z{}x$ as the (canonical) angular momentum
 \citep[cf.][]{Wisdom1988}. For a given $p_y$, the dynamics may be described in
 the reduced phase space $(x,z,p_x,p_z$). A particle traveling in the mid-plane
-at the local shear velocity \cref{eq:shear-flow} corresponds to a stationary
-point in this reduced phase space. To see this, we note that the first
-variation of $\mathcal{H}$ is given by
+at the local shear velocity \labelcref{eq:shear-flow} corresponds to a
+stationary point in this reduced phase space. To see this, we note that the
+first variation of $\mathcal{H}$ is given by
 \begin{equation}
   \delta\mathcal{H} = v_x\delta p_x + v_z\delta p_z
   + [S_y v_z - S_z(v_y + q\Omega x)]\delta x + \vfreq^2 z\delta z.
@@ -387,7 +387,7 @@ $e/m\to\infty$, the tidally induced anisotropy $\Delta\sim{}m/e$ disappears.
 From the definitions given in
 \cref{eq:gyrotropic-velocity,eq:gyro-frequency-vector} it then follows that
 $\vvc\approx\vec{v}+q\Omega{}x\ey$ and $\vomg\approx\vomc$. In the limit, any
-distribution function of the form $f(\vc_\perp,\vc_\parallel)$ thus becomes
+distribution function of the form $f(\vc_\perp,\vc_\parallel)$ thus becomes a
 drifting gyrotropic distribution in $\vec{v}$-space, with the anisotropy being
 due to the magnetic field only.
 
@@ -532,7 +532,7 @@ We note that \cref{eq:vlasov-relative,eq:faraday-relative} are exact. No
 approximations have been made so far. We also note that the only explicit
 $x$-dependence in \cref{eq:vlasov-relative,eq:faraday-relative} is multiplying
 $\partial/\partial{}y$. Provided the dynamics are axisymmetric, we may thus
-take the distribution functions $f_s$, the magnetic field $\vec{B}$, and the
+take the distribution function $f_s$, the magnetic field $\vec{B}$, and the
 \emph{relative} electric field $\tvec{E}$ to be periodic in $x$.\footnote{More
   generally, if $\partial/\partial{}y\ne0$, then each field appearing in
   \cref{eq:vlasov-relative,eq:faraday-relative} may be written as a sum of
@@ -577,7 +577,7 @@ solved for $\delta\vec{B}$, to wit
     \cdot\delta\tilde{\vec{E}}
   \right].
 \end{equation}
-Here, the second term in parenthesis arises from the stretching term in
+Here, the second term in parentheses arises from the stretching term in
 \cref{eq:faraday-relative}. Substituting \cref{eq:linearized-faraday} into
 \cref{eq:formal-solution}, taking the first moment, multiplying by $\qs{}n_s$,
 and summing over species yields the perturbed current density
@@ -661,7 +661,7 @@ where the dispersion tensor
   - 2q\Omega^2\sums\frac{n_s m_s}{\rho}
   \frac{\omcs/b_z}{\omcs b_z + 2\Omega}\ey\ey.
 \end{equation}
-Here, $\rho=\sums{}n_s{}m_s$ is the mass density, $\va^2=B^2/(\mu_0\rho)$ is
+Here, $\rho=\sums{}n_s{}m_s$ is the mass density, $\va^2=B^2/\mu_0\rho$ is
 the square of the Alfvén speed, and we have used the charge-neutrality
 condition to rewrite the last term on the right hand side.
 
@@ -944,7 +944,7 @@ this limit reduces to
   \label{eq:unmagnetized-dispersion-tensor}
   \va^{-2}\ell^2\mathbf{D} =
   (k^2\mathbf{1} - \vec{k}\vec{k} - i\omega\mu_0\vec{\sigma})\ell^2
-  + q/2\ey\ey,
+  + q/2\,\ey\ey,
 \end{equation}
 where $\ell$ is the mean inertial length, defined through
 \begin{equation}
@@ -991,7 +991,7 @@ fluid. Expanding the cold electron conductivity tensor in the mass ratio
 yields
 \begin{equation}
   \label{eq:cold-electron-conductivity}
-  \vec{\sigma}_e = -\frac{1}{i\omega}\frac{e^2n_e}{m_e}\vec{b}\vec{b}
+  \vec{\sigma}_e \approx -\frac{1}{i\omega}\frac{e^2n_e}{m_e}\vec{b}\vec{b}
   + \frac{en_e}{B}\vec{b}\times\mathbf{1},
 \end{equation}
 where we have dropped terms of order $m_e/m_i$ and higher. The first term
@@ -1048,8 +1048,8 @@ section are fully general and can be used to quantify the effects of kinetic
 electrons on the MRI\@. The cold electron approximation used here and in
 previous studies formally requires that $\zeta_n\rightarrow\infty$ for all $n$
 (\cref{sec:cold}). However,
-$\zeta_0=\omega/|k_\parallel|v_{t,e}\sim{}\va/v_{t,e}$ for the MRI (taking
-$\omega\sim{}k_z{}v_A$). Thus $\zeta_0\gg{}1$ requires
+$\zeta_0=\omega/|k_\parallel|v_{te}\sim{}\va/v_{te}$ for the MRI (taking
+$\omega\sim{}k_\parallel\va$). Thus $\zeta_0\gg{}1$ requires
 $T_e/T_i\ll(m_e/m_i)\beta_i^{-1}$. This is in general \emph{not} satisfied so
 that the cold electron approximation is not formally applicable when studying
 the MRI in hot accretion flows. In future work, we will study the effect of
@@ -1061,9 +1061,9 @@ the MRI in hot accretion flows. In future work, we will study the effect of
 In the limit $e/m\to\infty$ we should be able to recover the results of
 \citet{Quataert2002} who analyzed the stability of a differentially rotating
 plasma in the shearing sheet approximation using the so-called kinetic MHD
-equations \citep{Grad1961,Kulsrud1983,Hazeltine2004}. We start by expanding
-the response tensor in powers of $m/e$. Keeping mostly leading order terms,
-this yields
+equations \citep[see e.g.][]{Grad1961,Kulsrud1983,Hazeltine2004}. We start by
+expanding the response tensor in powers of $m/e$. Keeping mostly leading order
+terms, this yields
 \begin{equation}
   \mathbf{\Lambda} \approx
   -\frac{\omega^2}{\omc^2}(\mathbf{1} - \vec{e}_3\vec{e}_3)
@@ -1156,7 +1156,7 @@ gyration frequency $\omg>0$ throughout this text.\footnote{Unless of course
   $\omg^2<0$, in which case much of our analysis is invalidated, see the
   discussion in \cref{sec:delta}.} The cyclotron frequency $\omc=eB/m$ can
 have either sign, but this depends only on the sign of the charge, \emph{not}
-on direction of the magnetic field.
+on the direction of the magnetic field.
 
 In the absence of Coriolis and tidal forces, $\Lambda_{+}$ ($\Lambda_{-}$)
 would describe a right (left) handed circularly polarized wave. Insertion of
@@ -1621,7 +1621,7 @@ this bulk flow may be written as
   \vec{u} = r\Omega\nabla\varphi,
 \end{equation}
 where $\Omega(r,z)$ is the orbital frequency. Following
-\citet{Kaufman1972,Cary1983} we write the magnetic vector potential as
+\citet{Kaufman1972,Cary1983} we write the magnetic field as
 \begin{equation}
   \label{eq:global-bfield}
   \vec{B} =
@@ -1652,7 +1652,7 @@ This must be irrotational, thus
   \right)
   \pder{\Omega}{\vartheta}r\nabla\varphi = 0.
 \end{equation}
-The factor in parenthesis is the Jacobian of the transformation from flux
+The factor in parentheses is the Jacobian of the transformation from flux
 coordinates $(\psi,\varphi,\vartheta)$ to cylindrical coordinates
 $(r,\varphi,z)$. Assuming this is non-singular, it follows that the orbital
 frequency $\Omega(\psi)$ is constant on poloidal field lines
@@ -1729,7 +1729,7 @@ system $(r,z,p_r,p_z)$, the Hessian has the matrix representation
 \renewcommand*{\arraystretch}{2.5}
 \begin{equation}
   \label{eq:hessian}
-  \mathbf{D} =
+  \mathbf{D} \doteq
   \begin{bmatrix}
     \displaystyle S_z\left(S_z + r\pder{\Omega}{r}\right)
     + {\left(\cm\pder{A_z}{r}\right)}^2 & 0 & 0
@@ -1801,7 +1801,7 @@ where $\vec{w}=(r,z,p_r,p_z)$,
      0 &  0 & 0 & 1 \\
     -1 &  0 & 0 & 0 \\
      0 & -1 & 0 & 0
-  \end{bmatrix}
+  \end{bmatrix},
 \end{equation}
 and $\mathbf{D}$ is the Hessian given in \cref{eq:hessian}. Assuming that
 $\delta\vec{w}$ depends on time as $\exp(-i\omega{}t)$, the linearized system
