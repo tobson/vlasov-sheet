@@ -335,9 +335,9 @@ takes the same form as in a uniform plasma, with the gyro-frequency vector
 $\vomg$ defined in \cref{eq:gyro-frequency-vector} playing the role of the
 cyclotron frequency vector $\vomc=e\vec{B}/m$. Let us therefore adopt a
 cylindrical coordinate system $(\vc_\parallel,\vc_\perp,\vartheta)$ in
-$\vvc$-space that is aligned with $\vomg$. Here and in the following, $\perp$
-and $\parallel$ will always be defined with respect to the direction of
-$\vomg$. The steady state Vlasov equation is
+$\vvc$-space that is aligned with $\vomg$. In this and in the following
+section, the labels $\perp$ and $\parallel$ will always refer to the direction
+of $\vomg$. The steady state Vlasov equation is
 \begin{equation}
   [(\vec{v} + q\Omega x\ey)\times\vec{S}]\cdot\pder{f}{\vec{v}}
   = (\vvc\times\vomg)\cdot\pder{f}{\vvc} = -\omg\pder{f}{\vartheta} = 0,
@@ -1014,7 +1014,11 @@ perpendicular dispersion tensor
   - 2q\Omega^2\sums\frac{n_s{}m_s}{\rho}\frac{\omcs b_z}{\omcs b_z + 2\Omega}
   (\vec{b}\times\ex)(\vec{b}\times\ex).
 \end{equation}
-Here, $\vec{\sigma}_i$ is the (multi-component) ion conductivity tensor and
+We note that throughout this section, the labels $\perp$ and $\parallel$ refer
+to the direction of $\vec{b}$, \emph{not} to the gyro-frequency vector $\vomg$
+as in \cref{sec:steady-state,sec:linear-theory}. In
+\cref{eq:perpendicular-dispersion}, $\vec{\sigma}_i$ is the (multi-component)
+ion conductivity tensor and
 \begin{equation}
   \ome = \frac{en_e B}{\rho} = \sums\frac{n_s m_s}{\rho}\omcs
 \end{equation}
@@ -1069,9 +1073,8 @@ this yields
   + \frac{i\zeta_0 Wk_\perp\vt}{\omc}\vec{e}_1\times\mathbf{1}
   - \zeta_0^2 W\vec{e}_3\vec{e}_3.
 \end{equation}
-The argument of the $W$-function is $\zeta_0=\omega/|k_\parallel|\vt$ with
-$k_\parallel=\vec{k}\cdot\vec{b}$. Expanding the anisotropy tensor
-$\mathbf{Q}$ yields
+The argument of the $W$-function is $\zeta_0=\omega/|k_\parallel|\vt$.
+Expanding the anisotropy tensor $\mathbf{Q}$ yields
 \begin{equation}
   \mathbf{Q} \approx \mathbf{1} - \frac{q\Omega}{2\omc b_z}
   \left[1 - \frac{(8-q)\Omega}{4\omc b_z}\right]\ey\ey.
@@ -1131,10 +1134,12 @@ tensor in this case is given by
 \begin{equation}
   \label{eq:parallel-response}
   \mathbf{\Lambda} =
-  \vec{e}_3\vec{e}_3 + \frac{1}{2}\sum_\pm\Lambda^{}_\pm
-  (\vec{e}_1\pm i\vec{e}_2)(\vec{e}_1\mp i\vec{e}_2),
+  \frac{1}{2}\sum_\pm\Lambda^{}_\pm
+  (\vec{e}_1\pm i\vec{e}_2)(\vec{e}_1\mp i\vec{e}_2)
+  - \frac{\omega^2}{k_z^2\vt^2} W\left(\frac{\omega}{|k_z|\vt}\right)
+  \vec{e}_3\vec{e}_3,
 \end{equation}
-with components
+with perpendicular components
 \begin{equation}
   \label{eq:circular-components}
   \Lambda_\pm = \frac{\omega}{\omega\pm\omg}
