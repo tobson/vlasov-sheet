@@ -230,9 +230,9 @@ to Jeans' theorem, any distribution function that depends only on the
 integrals of motion is in equilibrium. Thus, any $f(\mathcal{E})$ is in
 equilibrium. However, any such distribution function describes an equilibrium
 in which the plasma is not rotationally supported but pressure-supported
-against the tidal force: there is no mean flow and the density is non-uniform.
-An equilibrium distribution function that is compatible with the underlying
-assumptions of the shearing sheet is obtained as follows.
+against the tidal force: there is no mean flow and the density is non-uniform
+in $x$. An equilibrium distribution function that is compatible with the
+underlying assumptions of the shearing sheet is obtained as follows.
 
 Inspection of \cref{eq:hamiltonian} immediately reveals that $y$ is a cyclic
 coordinate. A second integral of motion (in addition to the energy integral)
@@ -1145,18 +1145,18 @@ with perpendicular components
   \Lambda_\pm = \frac{\omega}{\omega\pm\omg}
   \left[1 - W\left(\frac{\omega\pm\omg}{|k_z|\vt}\right)\right].
 \end{equation}
-We note that $\ex\ne\vec{e}_1$ and $\ey\ne\vec{e}_2$ in general even for
-parallel modes. This is because the orthonormal basis
-$(\vec{e}_1,\vec{e}_2,\vec{e}_3)$ with $\vec{e}_3=\vomg/\omg$ is taken to be
-right-handed (see \cref{sec:plasma-response}), and whether or not the
-gyro-frequency vector $\vomg$ defined in \cref{eq:gyro-frequency-vector} is
-aligned with the angular velocity vector $\vec{\Omega}=\Omega\ez$ depends on
-the sign of $S_z=\omc{}b_z+2\Omega$. In this context we also note that the
-gyration frequency $\omg>0$ throughout this text.\footnote{Unless of course
-  $\omg^2<0$, in which case much of our analysis is invalidated, see the
-  discussion in \cref{sec:delta}.} The cyclotron frequency $\omc=eB/m$ can
-have either sign, but this depends only on the sign of the charge, \emph{not}
-on the direction of the magnetic field.
+At this point we note that even in the case of a purely vertical magnetic
+field ($\vec{B}=B_z\ez$), the coordinate basis
+$(\vec{e}_1,\vec{e}_2,\vec{e}_3)$ as defined in \cref{sec:plasma-response}
+does not in general coincide with $(\ex,\ey,\ez)$. This is because
+$\vec{e}_3=\vomg/\omg$, and whether the gyro-frequency vector $\vomg$ is
+aligned or anti-aligned with the angular frequency vector
+$\vec{\Omega}=\Omega\ez$ depends on the sign of $S_z=\omc{}b_z+2\Omega$. In
+this context we also note that the gyration frequency $\omg>0$ throughout this
+text.\footnote{Unless of course $\omg^2<0$, in which case much of our analysis
+  is invalidated, see the discussion in \cref{sec:delta}.} The cyclotron
+frequency $\omc=eB/m$ can have either sign, but this depends only on the sign
+of the charge, \emph{not} on the direction of the magnetic field.
 
 In the absence of Coriolis and tidal forces, $\Lambda_{+}$ ($\Lambda_{-}$)
 would describe a right (left) handed circularly polarized wave. Insertion of
@@ -1249,10 +1249,11 @@ to do so, let us assume the ordering
 \end{equation}
 where the ordering parameter $\epsilon\ll1$. We thus assume that the plasma is
 hot but not too hot in the sense that $1\ll\beta\ll\omc/\Omega$. The
-dispersion tensor to first order in $\epsilon$ is then given by
+perpendicular dispersion tensor to first order in $\epsilon$ is then given by
 \begin{equation}
   \label{eq:gyro-viscous-drel}
-  \mathbf{D}_\perp = (k_z^2\va^2 - \omega^2)\mathbf{1} - i\omega\left(
+  \mathbf{D}_\perp = (k_z^2\va^2 - \omega^2)(\mathbf{1} - \ez\ez)
+  - i\omega\left(
     2\Omega - \frac{k_z^2\vt^2}{\omc b_z}
   \right)\ez\times\mathbf{1} - 2q\Omega^2\ey\ey.
 \end{equation}
@@ -1451,9 +1452,9 @@ using standard results for a uniform plasma
 primary assumptions are charge-neutrality, axisymmetric perturbations, and no
 vertical stratification. The charge-neutral approximation is made both for its
 applicability to realistic accretion disk dynamics and because the shearing
-sheet approximation is locally Galilean invariant, not Lorentz invariant.
-Galilean invariance implies charge-neutrality once the displacement current is
-dropped \citep{Grad1966}.
+sheet approximation in its standard form relies on Galilean invariance, which
+in turn necessitates charge-neutrality once the displacement current is
+dropped \citep[see e.g.][]{Grad1966}.
 
 The resulting dispersion relation for a collisionless plasma in the shearing
 sheet approximation is given in \cref{eq:dispersion-tensor} with the
@@ -1855,10 +1856,11 @@ implies that circular orbits are linearly stable provided that
 which does \emph{not} coincide with the nonlinear stability boundary
 $\Delta<1$. In this context we remark that according to a theorem due to
 \citet{Bloch1994}, a relative equilibrium\footnote{Circular orbits are
-  relative equilibria.} that is \emph{not} nonlinearly stable is destabilized
-when a small amount of dissipation is added to the system. We are thus led to
-conclude that circular orbits in realistic systems are always unstable if
-$\Delta>1$, regardless of whether or not there is a toroidal magnetic field.
+  relative equilibria.} that is linearly but \emph{not} nonlinearly stable
+becomes linearly unstable when a small amount of dissipation is added to the
+system. We are thus led to conclude that circular orbits in realistic systems
+are always unstable if $\Delta>1$, regardless of whether or not there is a
+toroidal magnetic field.
 
 \subsection{The modified electromagnetic Schwarzschild distribution}
 
@@ -2118,7 +2120,7 @@ where the summation is over ion species only.
 The electron velocity $\ue$ plays a more fundamental role in Vlasov-fluid
 theory than may be apparent at first sight. Differentiating
 \cref{eq:charge-neutrality} with respect to time yields after a little bit of
-algebra the charge continuity equation
+algebra the continuity equation
 \begin{equation}
   \label{eq:charge-continuity}
   \pder{n_e}{t} + \nabla\cdot(n_e\vec{u}_e) = 0.
