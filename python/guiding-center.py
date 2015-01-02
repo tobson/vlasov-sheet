@@ -2,7 +2,7 @@
 
 from __future__ import division
 import numpy as np
-from DSolveGC import Newton
+from DSolveGC import DSolveGC
 import helpers
 pylab = helpers.setup ('ps')
 from matplotlib import rcParams, pyplot as plt
@@ -28,10 +28,10 @@ def left (axis):
     gamma = np.empty (nkx)
     for level in [-1, 0, 1, 2, 3, 4]:
         beta = bz*bz*float (10**level)
-        newton = Newton (beta, psi, va, Omega, qshear)
-        gamma[-1] = newton (kx[-1], kz, .1)
+        dsolve = DSolveGC (beta, psi, va, Omega, qshear)
+        gamma[-1] = dsolve (kx[-1], kz, .1)
         for i in range (nkx-1)[::-1]:
-            gamma[i] = newton (kx[i], kz, gamma[i+1])
+            gamma[i] = dsolve (kx[i], kz, gamma[i+1])
         axis.plot (kx/kz, gamma/Omega, 'k')
 
     axis.set_xlim (0., 1.5)
@@ -63,15 +63,15 @@ def right (axis):
     gamma = np.empty (nkz)
     for level in [-4, -2, 0, 1, 2, 3, 8]:
         beta = bz*bz*float (10**level)
-        newton = Newton (beta, psi, va, Omega, qshear)
+        dsolve = DSolveGC (beta, psi, va, Omega, qshear)
         if beta > 1.:
-            gamma[-1] = newton (kx, kz[-1], .1)
+            gamma[-1] = dsolve (kx, kz[-1], .1)
             for i in range (nkz-1)[::-1]:
-                gamma[i] = newton (kx, kz[i], gamma[i+1])
+                gamma[i] = dsolve (kx, kz[i], gamma[i+1])
         else:
-            gamma[0] = newton (kx, kz[0], 1e-3)
+            gamma[0] = dsolve (kx, kz[0], 1e-3)
             for i in range (1, nkz):
-                gamma[i] = newton (kx, kz[i], gamma[i-1])
+                gamma[i] = dsolve (kx, kz[i], gamma[i-1])
         axis.plot (kz*bz*va/Omega, gamma/Omega, 'k')
 
     axis.set_xlim (0., 2.)

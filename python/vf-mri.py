@@ -28,6 +28,7 @@ def compute ():
     kz_opt = np.empty (oc.shape + beta.shape, dtype = np.double)
     gamma_max = np.empty (oc.shape + beta.shape, dtype = np.double)
 
+    # Initialize progress bar
     pbar = ProgressBar ().start ()
 
     # Outer loop over cyclotron frequencies
@@ -43,7 +44,7 @@ def compute ():
         # Increment log (beta) by this much each iteration
         dlogbeta = .005
         # Coarse loop over beta
-        for j, beta1 in np.ndenumerate (beta):
+        for ibeta, beta1 in np.ndenumerate (beta):
             ratio = beta1/beta_min
             nbeta = np.log10 (ratio)/dlogbeta
             # Fine grained loop over beta
@@ -55,11 +56,13 @@ def compute ():
                     print "oc = %g, beta = %g" % (oc1, beta2)
                     raise SystemExit
             # Save result
-            kz_opt[ioc + j], gamma_max[ioc + j] = findmax (kz, gamma)
+            kz_opt[ioc + ibeta], gamma_max[ioc + ibeta] = findmax (kz, gamma)
             # Start next fine grained loop at this value
             beta_min = beta1
 
-        percentage = pbar.maxval*ioc[1]/(noc - 1)
+        # Update progress bar
+        count = ioc[0]*oc.shape[1] + ioc[1]
+        percentage = pbar.maxval*(count + 1)/oc.size
         pbar.update (percentage)
 
     return oc, beta, kz_opt, gamma_max

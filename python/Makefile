@@ -5,4 +5,5 @@ build_ext:
 	python setup.py build_ext --inplace
 
 clean:
-	rm -rf build *.so *.cpp *.c *.pyc
+	rm -rf build
+	rm -f DSolveGC.cpp DSolveParallel.cpp findmax.c *.so *.pyc

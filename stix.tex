@@ -35,7 +35,7 @@
 % Define rotated coordinate system
 \tdplotsetrotatedcoords{90}{\myphi}{\myalpha-90}
 \tdplotdrawarc[tdplot_rotated_coords]{(0,0,0)}{0.8}{0}{-\myalpha}{anchor=south
-west}{$\alpha$}
+west}{$\chi$}
 
 \tdplottransformmainrot{\kx}{0}{\kz}
 
@@ -55,6 +55,6 @@ node[anchor=south,black]{$\bm{\omega}_g$};
 \draw[-stealth,thick] (O) -- (\kx,0,\kz)
 node[anchor=south east,black]{$\bm{k}$};
 
-%\node at (0.5,0.25,-0.3){$k_x\tan\alpha=k_z\sin\varphi$};
+%\node at (0.5,0.25,-0.3){$k_x\tan\chi=k_z\sin\varphi$};
 
 \end{tikzpicture}
