@@ -139,14 +139,14 @@ are given by
 \end{equation}
 where $\hat{f}_s=f_s/n_s$ is the reduced distribution function.
 
-The tidal potential $\psi$ is the sum of the centrifugal and the gravitational
-potential. In the shearing sheet approximation \citep{Goldreich1965}, this is
-given by
+The tidal potential $\psi$ is the sum of the centrifugal potential and the
+gravitational potential. In the shearing sheet approximation
+\citep{Goldreich1965}, this is given by
 \begin{equation}
   \label{eq:tidal-potential}
   \psi = -q\Omega^2 x^2 + \frac{1}{2}\vfreq^2 z^2.
 \end{equation}
-The angular velocity $\Omega$ is determined from the radial force balance. We
+The angular velocity $\Omega$ is determined from radial force balance. We
 assume that in equilibrium, the magnetic field is frozen into a bulk flow
 $\vec{u}$ common to all species ($\vec{E}+\vec{u}\times\vec{B}=0$). If the
 gravitational potential is due to a point mass and radial pressure support is
@@ -230,9 +230,9 @@ to Jeans' theorem, any distribution function that depends only on the
 integrals of motion is in equilibrium. Thus, any $f(\mathcal{E})$ is in
 equilibrium. However, any such distribution function describes an equilibrium
 in which the plasma is not rotationally supported but pressure-supported
-against the tidal force: there is no mean flow and the density is non-uniform.
-An equilibrium distribution function that is compatible with the underlying
-assumptions of the shearing sheet is obtained as follows.
+against the tidal force: there is no mean flow and the density is non-uniform
+in $x$. An equilibrium distribution function that is compatible with the
+underlying assumptions of the shearing sheet is obtained as follows.
 
 Inspection of \cref{eq:hamiltonian} immediately reveals that $y$ is a cyclic
 coordinate. A second integral of motion (in addition to the energy integral)
@@ -240,9 +240,9 @@ is thus given by the conjugate momentum $p_y$. We will henceforth refer to
 $p_y=v_y+S_z{}x$ as the (canonical) angular momentum
 \citep[cf.][]{Wisdom1988}. For a given $p_y$, the dynamics may be described in
 the reduced phase space $(x,z,p_x,p_z$). A particle traveling in the mid-plane
-at the local shear velocity \cref{eq:shear-flow} corresponds to a stationary
-point in this reduced phase space. To see this, we note that the first
-variation of $\mathcal{H}$ is given by
+at the local shear velocity \labelcref{eq:shear-flow} corresponds to a
+stationary point in this reduced phase space. To see this, we note that the
+first variation of $\mathcal{H}$ is given by
 \begin{equation}
   \delta\mathcal{H} = v_x\delta p_x + v_z\delta p_z
   + [S_y v_z - S_z(v_y + q\Omega x)]\delta x + \vfreq^2 z\delta z.
@@ -335,9 +335,9 @@ takes the same form as in a uniform plasma, with the gyro-frequency vector
 $\vomg$ defined in \cref{eq:gyro-frequency-vector} playing the role of the
 cyclotron frequency vector $\vomc=e\vec{B}/m$. Let us therefore adopt a
 cylindrical coordinate system $(\vc_\parallel,\vc_\perp,\vartheta)$ in
-$\vvc$-space that is aligned with $\vomg$. Here and in the following, $\perp$
-and $\parallel$ will always be defined with respect to the direction of
-$\vomg$. The steady state Vlasov equation is
+$\vvc$-space that is aligned with $\vomg$. In this and in the following
+section, the labels $\perp$ and $\parallel$ will always refer to the direction
+of $\vomg$. The steady state Vlasov equation is
 \begin{equation}
   [(\vec{v} + q\Omega x\ey)\times\vec{S}]\cdot\pder{f}{\vec{v}}
   = (\vvc\times\vomg)\cdot\pder{f}{\vvc} = -\omg\pder{f}{\vartheta} = 0,
@@ -387,7 +387,7 @@ $e/m\to\infty$, the tidally induced anisotropy $\Delta\sim{}m/e$ disappears.
 From the definitions given in
 \cref{eq:gyrotropic-velocity,eq:gyro-frequency-vector} it then follows that
 $\vvc\approx\vec{v}+q\Omega{}x\ey$ and $\vomg\approx\vomc$. In the limit, any
-distribution function of the form $f(\vc_\perp,\vc_\parallel)$ thus becomes
+distribution function of the form $f(\vc_\perp,\vc_\parallel)$ thus becomes a
 drifting gyrotropic distribution in $\vec{v}$-space, with the anisotropy being
 due to the magnetic field only.
 
@@ -532,7 +532,7 @@ We note that \cref{eq:vlasov-relative,eq:faraday-relative} are exact. No
 approximations have been made so far. We also note that the only explicit
 $x$-dependence in \cref{eq:vlasov-relative,eq:faraday-relative} is multiplying
 $\partial/\partial{}y$. Provided the dynamics are axisymmetric, we may thus
-take the distribution functions $f_s$, the magnetic field $\vec{B}$, and the
+take the distribution function $f_s$, the magnetic field $\vec{B}$, and the
 \emph{relative} electric field $\tvec{E}$ to be periodic in $x$.\footnote{More
   generally, if $\partial/\partial{}y\ne0$, then each field appearing in
   \cref{eq:vlasov-relative,eq:faraday-relative} may be written as a sum of
@@ -577,7 +577,7 @@ solved for $\delta\vec{B}$, to wit
     \cdot\delta\tilde{\vec{E}}
   \right].
 \end{equation}
-Here, the second term in parenthesis arises from the stretching term in
+Here, the second term in parentheses arises from the stretching term in
 \cref{eq:faraday-relative}. Substituting \cref{eq:linearized-faraday} into
 \cref{eq:formal-solution}, taking the first moment, multiplying by $\qs{}n_s$,
 and summing over species yields the perturbed current density
@@ -661,7 +661,7 @@ where the dispersion tensor
   - 2q\Omega^2\sums\frac{n_s m_s}{\rho}
   \frac{\omcs/b_z}{\omcs b_z + 2\Omega}\ey\ey.
 \end{equation}
-Here, $\rho=\sums{}n_s{}m_s$ is the mass density, $\va^2=B^2/(\mu_0\rho)$ is
+Here, $\rho=\sums{}n_s{}m_s$ is the mass density, $\va^2=B^2/\mu_0\rho$ is
 the square of the Alfvén speed, and we have used the charge-neutrality
 condition to rewrite the last term on the right hand side.
 
@@ -944,7 +944,7 @@ this limit reduces to
   \label{eq:unmagnetized-dispersion-tensor}
   \va^{-2}\ell^2\mathbf{D} =
   (k^2\mathbf{1} - \vec{k}\vec{k} - i\omega\mu_0\vec{\sigma})\ell^2
-  + q/2\ey\ey,
+  + q/2\,\ey\ey,
 \end{equation}
 where $\ell$ is the mean inertial length, defined through
 \begin{equation}
@@ -991,7 +991,7 @@ fluid. Expanding the cold electron conductivity tensor in the mass ratio
 yields
 \begin{equation}
   \label{eq:cold-electron-conductivity}
-  \vec{\sigma}_e = -\frac{1}{i\omega}\frac{e^2n_e}{m_e}\vec{b}\vec{b}
+  \vec{\sigma}_e \approx -\frac{1}{i\omega}\frac{e^2n_e}{m_e}\vec{b}\vec{b}
   + \frac{en_e}{B}\vec{b}\times\mathbf{1},
 \end{equation}
 where we have dropped terms of order $m_e/m_i$ and higher. The first term
@@ -1014,7 +1014,11 @@ perpendicular dispersion tensor
   - 2q\Omega^2\sums\frac{n_s{}m_s}{\rho}\frac{\omcs b_z}{\omcs b_z + 2\Omega}
   (\vec{b}\times\ex)(\vec{b}\times\ex).
 \end{equation}
-Here, $\vec{\sigma}_i$ is the (multi-component) ion conductivity tensor and
+We note that throughout this section, the labels $\perp$ and $\parallel$ refer
+to the direction of $\vec{b}$, \emph{not} to the gyro-frequency vector $\vomg$
+as in \cref{sec:steady-state,sec:linear-theory}. In
+\cref{eq:perpendicular-dispersion}, $\vec{\sigma}_i$ is the (multi-component)
+ion conductivity tensor and
 \begin{equation}
   \ome = \frac{en_e B}{\rho} = \sums\frac{n_s m_s}{\rho}\omcs
 \end{equation}
@@ -1044,8 +1048,8 @@ section are fully general and can be used to quantify the effects of kinetic
 electrons on the MRI\@. The cold electron approximation used here and in
 previous studies formally requires that $\zeta_n\rightarrow\infty$ for all $n$
 (\cref{sec:cold}). However,
-$\zeta_0=\omega/|k_\parallel|v_{t,e}\sim{}\va/v_{t,e}$ for the MRI (taking
-$\omega\sim{}k_z{}v_A$). Thus $\zeta_0\gg{}1$ requires
+$\zeta_0=\omega/|k_\parallel|v_{te}\sim{}\va/v_{te}$ for the MRI (taking
+$\omega\sim{}k_\parallel\va$). Thus $\zeta_0\gg{}1$ requires
 $T_e/T_i\ll(m_e/m_i)\beta_i^{-1}$. This is in general \emph{not} satisfied so
 that the cold electron approximation is not formally applicable when studying
 the MRI in hot accretion flows. In future work, we will study the effect of
@@ -1057,9 +1061,9 @@ the MRI in hot accretion flows. In future work, we will study the effect of
 In the limit $e/m\to\infty$ we should be able to recover the results of
 \citet{Quataert2002} who analyzed the stability of a differentially rotating
 plasma in the shearing sheet approximation using the so-called kinetic MHD
-equations \citep{Grad1961,Kulsrud1983,Hazeltine2004}. We start by expanding
-the response tensor in powers of $m/e$. Keeping mostly leading order terms,
-this yields
+equations \citep[see e.g.][]{Grad1961,Kulsrud1983,Hazeltine2004}. We start by
+expanding the response tensor in powers of $m/e$. Keeping mostly leading order
+terms, this yields
 \begin{equation}
   \mathbf{\Lambda} \approx
   -\frac{\omega^2}{\omc^2}(\mathbf{1} - \vec{e}_3\vec{e}_3)
@@ -1069,9 +1073,8 @@ this yields
   + \frac{i\zeta_0 Wk_\perp\vt}{\omc}\vec{e}_1\times\mathbf{1}
   - \zeta_0^2 W\vec{e}_3\vec{e}_3.
 \end{equation}
-The argument of the $W$-function is $\zeta_0=\omega/|k_\parallel|\vt$ with
-$k_\parallel=\vec{k}\cdot\vec{b}$. Expanding the anisotropy tensor
-$\mathbf{Q}$ yields
+The argument of the $W$-function is $\zeta_0=\omega/|k_\parallel|\vt$.
+Expanding the anisotropy tensor $\mathbf{Q}$ yields
 \begin{equation}
   \mathbf{Q} \approx \mathbf{1} - \frac{q\Omega}{2\omc b_z}
   \left[1 - \frac{(8-q)\Omega}{4\omc b_z}\right]\ey\ey.
@@ -1131,27 +1134,29 @@ tensor in this case is given by
 \begin{equation}
   \label{eq:parallel-response}
   \mathbf{\Lambda} =
-  \vec{e}_3\vec{e}_3 + \frac{1}{2}\sum_\pm\Lambda^{}_\pm
-  (\vec{e}_1\pm i\vec{e}_2)(\vec{e}_1\mp i\vec{e}_2),
+  \frac{1}{2}\sum_\pm\Lambda^{}_\pm
+  (\vec{e}_1\pm i\vec{e}_2)(\vec{e}_1\mp i\vec{e}_2)
+  - \frac{\omega^2}{k_z^2\vt^2} W\left(\frac{\omega}{|k_z|\vt}\right)
+  \vec{e}_3\vec{e}_3,
 \end{equation}
-with components
+with perpendicular components
 \begin{equation}
   \label{eq:circular-components}
   \Lambda_\pm = \frac{\omega}{\omega\pm\omg}
   \left[1 - W\left(\frac{\omega\pm\omg}{|k_z|\vt}\right)\right].
 \end{equation}
-We note that $\ex\ne\vec{e}_1$ and $\ey\ne\vec{e}_2$ in general even for
-parallel modes. This is because the orthonormal basis
-$(\vec{e}_1,\vec{e}_2,\vec{e}_3)$ with $\vec{e}_3=\vomg/\omg$ is taken to be
-right-handed (see \cref{sec:plasma-response}), and whether or not the
-gyro-frequency vector $\vomg$ defined in \cref{eq:gyro-frequency-vector} is
-aligned with the angular velocity vector $\vec{\Omega}=\Omega\ez$ depends on
-the sign of $S_z=\omc{}b_z+2\Omega$. In this context we also note that the
-gyration frequency $\omg>0$ throughout this text.\footnote{Unless of course
-  $\omg^2<0$, in which case much of our analysis is invalidated, see the
-  discussion in \cref{sec:delta}.} The cyclotron frequency $\omc=eB/m$ can
-have either sign, but this depends only on the sign of the charge, \emph{not}
-on direction of the magnetic field.
+At this point we note that even in the case of a purely vertical magnetic
+field ($\vec{B}=B_z\ez$), the coordinate basis
+$(\vec{e}_1,\vec{e}_2,\vec{e}_3)$ as defined in \cref{sec:plasma-response}
+does not in general coincide with $(\ex,\ey,\ez)$. This is because
+$\vec{e}_3=\vomg/\omg$, and whether the gyro-frequency vector $\vomg$ is
+aligned or anti-aligned with the angular frequency vector
+$\vec{\Omega}=\Omega\ez$ depends on the sign of $S_z=\omc{}b_z+2\Omega$. In
+this context we also note that the gyration frequency $\omg>0$ throughout this
+text.\footnote{Unless of course $\omg^2<0$, in which case much of our analysis
+  is invalidated, see the discussion in \cref{sec:delta}.} The cyclotron
+frequency $\omc=eB/m$ can have either sign, but this depends only on the sign
+of the charge, \emph{not} on the direction of the magnetic field.
 
 In the absence of Coriolis and tidal forces, $\Lambda_{+}$ ($\Lambda_{-}$)
 would describe a right (left) handed circularly polarized wave. Insertion of
@@ -1244,10 +1249,11 @@ to do so, let us assume the ordering
 \end{equation}
 where the ordering parameter $\epsilon\ll1$. We thus assume that the plasma is
 hot but not too hot in the sense that $1\ll\beta\ll\omc/\Omega$. The
-dispersion tensor to first order in $\epsilon$ is then given by
+perpendicular dispersion tensor to first order in $\epsilon$ is then given by
 \begin{equation}
   \label{eq:gyro-viscous-drel}
-  \mathbf{D}_\perp = (k_z^2\va^2 - \omega^2)\mathbf{1} - i\omega\left(
+  \mathbf{D}_\perp = (k_z^2\va^2 - \omega^2)(\mathbf{1} - \ez\ez)
+  - i\omega\left(
     2\Omega - \frac{k_z^2\vt^2}{\omc b_z}
   \right)\ez\times\mathbf{1} - 2q\Omega^2\ey\ey.
 \end{equation}
@@ -1446,9 +1452,9 @@ using standard results for a uniform plasma
 primary assumptions are charge-neutrality, axisymmetric perturbations, and no
 vertical stratification. The charge-neutral approximation is made both for its
 applicability to realistic accretion disk dynamics and because the shearing
-sheet approximation is locally Galilean invariant, not Lorentz invariant.
-Galilean invariance implies charge-neutrality once the displacement current is
-dropped \citep{Grad1966}.
+sheet approximation in its standard form relies on Galilean invariance, which
+in turn necessitates charge-neutrality once the displacement current is
+dropped \citep[see e.g.][]{Grad1966}.
 
 The resulting dispersion relation for a collisionless plasma in the shearing
 sheet approximation is given in \cref{eq:dispersion-tensor} with the
@@ -1616,7 +1622,7 @@ this bulk flow may be written as
   \vec{u} = r\Omega\nabla\varphi,
 \end{equation}
 where $\Omega(r,z)$ is the orbital frequency. Following
-\citet{Kaufman1972,Cary1983} we write the magnetic vector potential as
+\citet{Kaufman1972,Cary1983} we write the magnetic field as
 \begin{equation}
   \label{eq:global-bfield}
   \vec{B} =
@@ -1647,7 +1653,7 @@ This must be irrotational, thus
   \right)
   \pder{\Omega}{\vartheta}r\nabla\varphi = 0.
 \end{equation}
-The factor in parenthesis is the Jacobian of the transformation from flux
+The factor in parentheses is the Jacobian of the transformation from flux
 coordinates $(\psi,\varphi,\vartheta)$ to cylindrical coordinates
 $(r,\varphi,z)$. Assuming this is non-singular, it follows that the orbital
 frequency $\Omega(\psi)$ is constant on poloidal field lines
@@ -1724,7 +1730,7 @@ system $(r,z,p_r,p_z)$, the Hessian has the matrix representation
 \renewcommand*{\arraystretch}{2.5}
 \begin{equation}
   \label{eq:hessian}
-  \mathbf{D} =
+  \mathbf{D} \doteq
   \begin{bmatrix}
     \displaystyle S_z\left(S_z + r\pder{\Omega}{r}\right)
     + {\left(\cm\pder{A_z}{r}\right)}^2 & 0 & 0
@@ -1796,7 +1802,7 @@ where $\vec{w}=(r,z,p_r,p_z)$,
      0 &  0 & 0 & 1 \\
     -1 &  0 & 0 & 0 \\
      0 & -1 & 0 & 0
-  \end{bmatrix}
+  \end{bmatrix},
 \end{equation}
 and $\mathbf{D}$ is the Hessian given in \cref{eq:hessian}. Assuming that
 $\delta\vec{w}$ depends on time as $\exp(-i\omega{}t)$, the linearized system
@@ -1850,10 +1856,11 @@ implies that circular orbits are linearly stable provided that
 which does \emph{not} coincide with the nonlinear stability boundary
 $\Delta<1$. In this context we remark that according to a theorem due to
 \citet{Bloch1994}, a relative equilibrium\footnote{Circular orbits are
-  relative equilibria.} that is \emph{not} nonlinearly stable is destabilized
-when a small amount of dissipation is added to the system. We are thus led to
-conclude that circular orbits in realistic systems are always unstable if
-$\Delta>1$, regardless of whether or not there is a toroidal magnetic field.
+  relative equilibria.} that is linearly but \emph{not} nonlinearly stable
+becomes linearly unstable when a small amount of dissipation is added to the
+system. We are thus led to conclude that circular orbits in realistic systems
+are always unstable if $\Delta>1$, regardless of whether or not there is a
+toroidal magnetic field.
 
 \subsection{The modified electromagnetic Schwarzschild distribution}
 
@@ -2113,7 +2120,7 @@ where the summation is over ion species only.
 The electron velocity $\ue$ plays a more fundamental role in Vlasov-fluid
 theory than may be apparent at first sight. Differentiating
 \cref{eq:charge-neutrality} with respect to time yields after a little bit of
-algebra the charge continuity equation
+algebra the continuity equation
 \begin{equation}
   \label{eq:charge-continuity}
   \pder{n_e}{t} + \nabla\cdot(n_e\vec{u}_e) = 0.

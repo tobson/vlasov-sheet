@@ -4,6 +4,9 @@ figures
 paper.pdf
 paperNotes.bib
 
+erratum.pdf
+erratumNotes.bib
+
 *.aux
 *.log
 *.toc
